@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "League Gothic";
+  src: url("/fonts/LeagueGothic-1.601/static/WOFF2/LeagueGothic-Regular.woff2")
+      format("woff2"),
+    url("/fonts/LeagueGothic-1.601/static/WOFF/LeagueGothic-Regular.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(83, 198, 255);
+}
+
+.header {
+  font-size: 120px;
+  text-align: center;
+  color: white;
+  font-family: League Gothic;
+  text-shadow: 1px 1px 0 #999, 2px 2px 0 #777, 3px 3px 0 #555;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.play-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+.play-btn {
+  background-color: white;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: 3px solid lightgray;
+  transform: 0.4s ease-out;
+}
+
+.play-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.play-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: calc(100% + 2rem);
+  height: calc(100% + 2rem);
+  border-radius: 0.5rem;
+  border: 3px solid lightslategray;
+  opacity: 0;
+  transition: 0.4s ease-out;
+}
+
+.play-btn:hover {
+  color: hotpink;
+  border-color: transparent;
+}
+
+.play-btn:hover:after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-color: hotpink;
+}
+
+.account-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.account-btn {
+  background-color: #dbdbdb;
+}
+
+/* GAMEPLAY STYLING */
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+#flip-button {
+  text-align: center;
+  width: 60px;
+}
+
+#start-button {
+  text-align: center;
+  width: 60px;
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.option-container {
+  width: 60px;
+  height: 330px;
+  margin: 30px 0;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.destroyer {
+  background-color: brown;
+}
+
+.destroyer-preview {
+  width: 10px;
+  height: 20px;
+  margin: 3px;
+}
+
+.submarine {
+  background-color: green;
+}
+.submarine-preview {
+  width: 10px;
+  height: 30px;
+  margin: 3px;
+}
+
+.cruiser {
+  background-color: purple;
+}
+
+.cruiser-preview {
+  width: 10px;
+  height: 30px;
+  margin: 3px;
+}
+
+.battleship {
+  background-color: orange;
+}
+
+.battleship-preview {
+  width: 10px;
+  height: 40px;
+  margin: 3px;
+}
+
+.carrier {
+  background-color: blue;
+}
+
+.carrier-preview {
+  width: 10px;
+  height: 50px;
+  margin: 3px;
+}
+
+#gamesboard-container {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-board {
+  width: 330px;
+  height: 330px;
+  display: grid;
+}
+
+/* .cell {
+  border: solid 1px black;
+  box-sizing: border-box; 
+} */
+
+#computer .destroyer,
+#computer .submarine,
+#computer .cruiser,
+#computer .battleship,
+#computer .carrier {
+  background-color: white;
+}
+
+.hover {
+  background-color: gray;
+}
+
+.boom {
+  background-color: red !important;
+}
+
+.empty {
+  background-color: gray !important;
+}
